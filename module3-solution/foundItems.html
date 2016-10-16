@@ -1,0 +1,8 @@
+<p class="subtitle" ng-if="founditems.items.length">{{ founditems.items.length }} items in my list</p>
+<ul class="items">
+    <li ng-repeat="item in founditems.items">
+       <span class="item-label">Item Name:</span> {{ item.name }}  ({{ item.short_name }})
+       <p><span class="item-label">Item Description:</span> {{ item.description }}</p>
+       <button ng-click="founditems.onRemove({index: $index});" class="btn btn-primary">Don't want this one!</button>
+    </li>
+</ul>
